@@ -1,5 +1,5 @@
 # Fair-DP
-
+This is the codebase accompanying the paper [Disparate Impact in Differential Privacy from Gradient Misalignment](https://arxiv.org/abs/2206.07737). It was accepted for a spotlight presentation in ICLR 2023 and you can check the [open review](https://openreview.net/forum?id=qLOaeRvteqbx).
 ## Prerequisites
 
 - Install conda, pip
