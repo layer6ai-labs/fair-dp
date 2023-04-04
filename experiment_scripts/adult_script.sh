@@ -13,9 +13,6 @@ do
   echo "$seed dpsgd"
   python3 main.py --dataset=adult --method=dpsgd --config group_ratios=1,1 --config make_valid_loader=0 --config net=mlp --config lr=0.01 --config train_batch_size=256 --config valid_batch_size=256 --config test_batch_size=256 --config max_epochs=20 --config delta=1e-6 --config noise_multiplier=1 --config l2_norm_clip=0.5 --config evaluate_angles=$angles --config evaluate_hessian=$hessian --config angle_comp_step=$step --config logdir=$dir/adult_dpsgd --config seed=$seed
 
-  echo "$seed dpsgd-fairness_lens"
-  python3 main.py --dataset=adult --method=fairness-lens --config group_ratios=1,1 --config make_valid_loader=0 --config net=mlp --config train_batch_size=256 --config valid_batch_size=256 --config test_batch_size=256 --config max_epochs=20 --config delta=1e-6 --config noise_multiplier=1 --config l2_norm_clip=0.5 --config evaluate_angles=$angles --config evaluate_hessian=$hessian --config angle_comp_step=$step --config lr=0.01 --config gradient_regularizer=1 --config boundary_regularizer=1 --config logdir=$dir/adult_fairlens --config seed=$seed
-
   echo "$seed dpsgd-f"
   python3 main.py --dataset=adult --method=dpsgd-f --config group_ratios=1,1 --config make_valid_loader=0 --config net=mlp --config lr=0.01 --config train_batch_size=256 --config valid_batch_size=256 --config test_batch_size=256 --config max_epochs=20 --config delta=1e-6 --config noise_multiplier=1 --config base_max_grad_norm=0.5 --config counts_noise_multiplier=10 --config evaluate_angles=$angles --config evaluate_hessian=$hessian --config angle_comp_step=$step --config logdir=$dir/adult_dpsgdf --config seed=$seed
 
